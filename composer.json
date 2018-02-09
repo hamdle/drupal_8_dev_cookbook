@@ -24,6 +24,7 @@
         "drupal/core": "~8.4",
         "drupal/honeypot": "^1.27",
         "drupal/linkit": "^4.3",
+        "drupal/pathauto": "^1.0",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
