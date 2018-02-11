@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Update "Contact Us" form to have a reply message.
+ */
+
+function mymodule_update_9000() {
+	$contact_form = \Drupal\contact\Entity\ContactForm::load('contactus');
+	$contact_form->setReply(t('Thank you for contact ME'));
+	$contact_form->save();
+}
