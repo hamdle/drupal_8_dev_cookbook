@@ -16,4 +16,15 @@ class MyPageController extends ControllerBase {
 			'#markup' => t('Hello Drupal 8 world!'),
 		];
 	}
+
+	/**
+	 * Returns markup for our custom page.
+	 */
+	public function cats($name) {
+		return [
+			'#markup' => t('Hello cat named @name', [
+				'@name' => $name,
+			]),
+		];
+	}
 }
