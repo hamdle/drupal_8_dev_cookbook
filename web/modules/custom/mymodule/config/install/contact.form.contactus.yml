@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependences: {}
+id: contactus
+label: 'Contact ME'
+recipients:
+  - webmaster@example.com
