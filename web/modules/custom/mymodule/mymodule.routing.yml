@@ -10,5 +10,5 @@ mymodule.cats:
   defaults:
     _controller: '\Drupal\mymodule\Controller\MyPageController::cats'
   requirements:
-    _permission: 'access content'
+    _permission: 'look at cats'
     name: '[a-zA-Z]+'
