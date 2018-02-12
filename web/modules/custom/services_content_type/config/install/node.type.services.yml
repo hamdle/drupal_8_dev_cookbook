@@ -10,7 +10,7 @@ third_party_settings:
     parent: 'main:'
 name: Services
 type: services
-description: 'This is my test content type.'
+description: 'Create a service to show on the site. Requires a pictures.'
 help: ''
 new_revision: true
 preview_mode: 1
