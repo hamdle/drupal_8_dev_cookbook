@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_number
+    - node.type.services
+  module:
+    - telephone
+id: node.services.field_service_number
+field_name: field_service_number
+entity_type: node
+bundle: services
+label: 'Service Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

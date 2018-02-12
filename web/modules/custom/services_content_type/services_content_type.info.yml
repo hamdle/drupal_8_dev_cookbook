@@ -1,0 +1,12 @@
+name: 'Services Content Type'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - image
+  - menu_ui
+  - node
+  - path
+  - telephone
+  - text
+  - user
