@@ -60,7 +60,7 @@ class RequestSubscriber implements EventSubscriberInterface {
 			$redirect = new RedirectResponse($url);
 
 			// Override default response with new redirect
-			$event->setResponse($redirect);
+			//$event->setResponse($redirect);
 		}
 	}
 

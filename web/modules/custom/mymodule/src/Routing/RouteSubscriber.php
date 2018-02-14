@@ -12,7 +12,7 @@ class RouteSubscriber extends RouteSubscriberBase {
 	public function alterRoutes(RouteCollection $collection) {
 		// Change path of mymodule.mypage to add world
 		if ($route = $collection->get('mymodule.mypage')) {
-			$route->setPath('hello-world');
+			$route->setPath('hello');
 		}
 	}
 }
