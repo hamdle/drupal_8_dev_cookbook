@@ -12,3 +12,7 @@
 #}
 {% set placeholder = attributes.placeholder ? attributes.placeholder : 'Tink@dink.com' %}
 <input{{ attributes.addClass('input_email').setAttribute('placeholder', placeholder) }} />{{ children }}
+
+<pre>
+{{ dump(attributes) }}
+</pre>
