@@ -89,4 +89,11 @@ class ExampleForm extends FormBase {
     {
         // TODO: Implement submitForm() method.
     }
+
+    public function validateForm(array &$form, FormStateInterface $form_state)
+    {
+        $value = trim($form['#cat_name']);
+
+        // TODO: continue work here
+    }
 }
