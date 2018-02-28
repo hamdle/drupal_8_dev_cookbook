@@ -35,6 +35,40 @@ class ExampleForm extends FormBase {
             '#type' => 'textfield',
             '#title' => 'Cat Name',
         ];
+
+        $form['phone'] = [
+            '#type' => 'tel',
+            '#title' => $this->t('Phone'),
+        ];
+        $form['email'] = [
+            '#type' => 'email',
+            '#title' => $this->t('Email'),
+        ];
+        $form['integer'] = [
+            '#type' => 'number',
+            '#title' => $this->t('Integer Value 1 - 10'),
+            '#step' => 1,
+            '#min' => 0,
+            '#max' => 10,
+        ];
+        $form['date'] = [
+            '#type' => 'date',
+            '#title' => $this->t('Date'),
+            '#date_date_format' => 'Y-m-d',
+        ];
+        $form['search'] = [
+            '#type' => 'search',
+            '#title' => $this->t('Search'),
+            '#autocomplete_route_name' => FALSE,
+        ];
+        $form['range'] = [
+            '#type' => 'range',
+            '#title' => $this->t('Range 0 - 99'),
+            '#min' => 0,
+            '#max' => 99,
+            '#step' => 1,
+        ];
+
         $form['submit'] = [
             '#type' => 'submit',
             '#value' => $this->t('OK'),
