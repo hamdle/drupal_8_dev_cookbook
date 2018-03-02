@@ -15,7 +15,7 @@ class ExampleForm extends FormBase {
      */
     public function getFormId()
     {
-        // TODO: Implement getFormId() method.
+        return 'drupalform_example_form';
     }
 
     /**
@@ -35,7 +35,7 @@ class ExampleForm extends FormBase {
             '#type' => 'textfield',
             '#title' => 'Cat Name',
         ];
-
+        /*
         $form['phone'] = [
             '#type' => 'tel',
             '#title' => $this->t('Phone'),
@@ -68,13 +68,25 @@ class ExampleForm extends FormBase {
             '#max' => 99,
             '#step' => 1,
         ];
-
+        */
         $form['submit'] = [
             '#type' => 'submit',
             '#value' => $this->t('OK'),
         ];
 
         return $form;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function validateForm(array &$form, FormStateInterface $form_state)
+    {
+        if (!$form_state->isValueEmpty('cat_name')) {
+            if ($form_state->getValue('cat_name') == "tiger") {
+                $form_state->setErrorByName('cat_name', t('Tiger is my cat. Pick another name.'));
+            }
+        }
     }
 
     /**
@@ -88,14 +100,5 @@ class ExampleForm extends FormBase {
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
         // TODO: Implement submitForm() method.
-    }
-
-    public function validateForm(array &$form, FormStateInterface $form_state)
-    {
-        if (!$form_state->isValueEmpty('cat_name')) {
-            if ($form_state->getValue('cat_name').equalTo('tiger')) {
-                // Set validation error.
-            }
-        }
     }
 }
