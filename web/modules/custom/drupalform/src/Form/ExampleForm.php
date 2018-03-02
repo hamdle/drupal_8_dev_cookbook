@@ -92,8 +92,10 @@ class ExampleForm extends FormBase {
 
     public function validateForm(array &$form, FormStateInterface $form_state)
     {
-        $value = trim($form['#cat_name']);
-
-        // TODO: continue work here
+        if (!$form_state->isValueEmpty('cat_name')) {
+            if ($form_state->getValue('cat_name').equalTo('tiger')) {
+                // Set validation error.
+            }
+        }
     }
 }
