@@ -34,6 +34,7 @@ class ExampleForm extends ConfigFormBase {
         $form['cat_name'] = [
             '#type' => 'textfield',
             '#title' => 'Cat Name',
+            '#default_value' => $this->config('drupalform.settings')->get('cat_name'),
         ];
         /*
         $form['phone'] = [
@@ -69,12 +70,15 @@ class ExampleForm extends ConfigFormBase {
             '#step' => 1,
         ];
         */
+        /*
         $form['submit'] = [
             '#type' => 'submit',
             '#value' => $this->t('OK'),
         ];
+        */
 
-        return $form;
+        // return $form;
+        return parent::buildForm($form, $form_state);
     }
 
     /**
@@ -99,6 +103,14 @@ class ExampleForm extends ConfigFormBase {
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        // TODO: Implement submitForm() method.
+        parent::submitForm($form, $form_state);
+        $this->config('drupalform.settings')->set('cat_name', $form_state->getValue('cat_name'));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getEditableConfigNames() {
+        return ['drupalform.settings'];
     }
 }
