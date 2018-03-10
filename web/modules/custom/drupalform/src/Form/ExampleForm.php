@@ -2,10 +2,10 @@
 
 namespace Drupal\drupalform\Form;
 
-use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class ExampleForm extends FormBase {
+class ExampleForm extends ConfigFormBase {
 
     /**
      * Returns a unique string identifying the form.
