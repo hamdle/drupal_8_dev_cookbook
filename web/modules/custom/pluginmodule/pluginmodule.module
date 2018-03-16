@@ -1,0 +1,21 @@
+<?php
+/**
+* Implements hook_block_alter().
+*
+* This hook overrides the block annotation (comments)
+*/
+function mymodule_block_alter(&$definitions) {}
+
+/**
+* Implements hook_block_build_alter().
+*
+* This hook overrides the build information
+*/
+function hook_block_build_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {}
+
+/**
+* Implements hook_block_view_alter().
+*
+* This hook modifies the output to be rendered
+*/
+function hook_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {}
