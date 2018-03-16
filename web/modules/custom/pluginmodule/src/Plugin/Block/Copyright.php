@@ -19,8 +19,8 @@ class Copyright extends BlockBase {
     public function build() {
         $date = new \DateTime();
         return [
-          '#markup' => t('Copyright @year&copy; My Company', [
-              '@year' => $date->format('Y'),
+          '#markup' => t('Timestamp @year', [
+              '@year' => $date->getTimestamp(),
           ]),
         ];
     }
