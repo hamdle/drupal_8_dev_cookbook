@@ -13,4 +13,15 @@ use Drupal\Core\Block\BlockBase;
  */
 class Copyright extends BlockBase {
 
+    /**
+     * {@inheritdoc}
+     */
+    public function build() {
+        $date = new \DateTime();
+        return [
+          '#markup' => t('Copyright @year&copy; My Company', [
+              '@year' => $date->format('Y'),
+          ]),
+        ];
+    }
 }
