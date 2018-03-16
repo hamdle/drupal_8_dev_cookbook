@@ -1,0 +1,4 @@
+name: Plugin API Module
+type: module
+description: Chapter 7 Plug and Play with Plugins
+core: 8.x
