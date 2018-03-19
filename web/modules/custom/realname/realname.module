@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_field_info_alter().
+ */
+function realname_field_info_alter(&$info)
+{
+    $info['realname']['label'] = t('Real Nom');
+}
