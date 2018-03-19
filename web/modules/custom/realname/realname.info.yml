@@ -1,0 +1,4 @@
+name: Real Name Field
+description: Add a First and Last name custom field
+type: module
+core: 8.x
