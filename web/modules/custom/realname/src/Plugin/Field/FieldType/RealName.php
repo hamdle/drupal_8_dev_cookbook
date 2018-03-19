@@ -49,4 +49,13 @@ class RealName extends FieldItemBase
             ],
         ];
     }
+
+    /**
+     * @{inheritdoc}
+     */
+    public static function propertyDefinition(\Drupal\Core\Field\FieldStorageDefinitionInterface $field_definition)
+    {
+        $properties['first_name'] = \Drupal\Core\TypedData\DataDefinition::create('string')->setLabel(t('First name'));
+        $properties['last_name'] = \Drupal\Core\TypedData\DataDefinition::create('string')->setLabel(t('Last name'));
+    }
 }
