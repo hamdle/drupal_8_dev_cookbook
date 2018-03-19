@@ -18,6 +18,35 @@ use Drupal\Core\TypedData\DataDefinition;
  *      default_formatter = "string",
  */
 
-class RealName extends FieldItemBase {
+class RealName extends FieldItemBase
+{
 
+    /**
+     * {@inheritdoc}
+    */
+    public static function schema(\Drupal\Core\Field\FieldStorageDefinitionInterface $field_definition)
+    {
+        return [
+            'columns' => [
+                'first_name' => [
+                    'description' => 'First name',
+                    'type' => 'varchar',
+                    'length' => '255',
+                    'not null' => TRUE,
+                    'default' => '',
+                ],
+                'last_name' => [
+                    'description' => 'Last name',
+                    'type' => 'varchar',
+                    'length' => '255',
+                    'not null' => TRUE,
+                    'default' => '',
+                ]
+            ],
+            'indexes' => [
+                'first_name' => ['first_name'],
+                'last_name' => ['last_name'],
+            ],
+        ];
+    }
 }
