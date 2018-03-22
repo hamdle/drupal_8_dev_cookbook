@@ -16,6 +16,25 @@ use Drupal\Core\Field\FieldItemListInterface;
  *   }
  * )
  */
-class RealNameFormatter extends FormatterBase {
-    // TODO : implement field item list interface
+class RealNameFormatter extends FormatterBase
+{
+    /**
+     * @{inheritdoc}
+     */
+    public function viewElements(FieldItemListInterface $items, $langcode)
+    {
+        $element = [];
+
+        foreach ($items as $delta => $item)
+        {
+            $element[$delta] = [
+              '#markup' => $this->t('@first @last', [
+                  '@first' => $item->first_name,
+                  '@last' => $item->last_name,
+              ]),
+            ];
+        }
+
+        return $element;
+    }
 }
