@@ -14,7 +14,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   label = @Translation("Real name"),
  *   description = @Translation("This field stores a first and last name."),
  *   category = @Translation("General"),
- *   default_widget = "string_textfield",
+ *   default_widget = "realname_default",
  *   default_formatter = "string"
  * )
  */
