@@ -1,0 +1,14 @@
+# Schema for the config files of the Site Accouncement
+configentity.announcement.*:
+  type: config_entity
+  label: 'Site announcement'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    message:
+      type: text
+      label: 'Text'
