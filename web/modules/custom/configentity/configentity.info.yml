@@ -1,0 +1,4 @@
+name: Config Entity Type
+description: First recipe from Chapter 10 on Entity API
+type: module
+core: 8.x
