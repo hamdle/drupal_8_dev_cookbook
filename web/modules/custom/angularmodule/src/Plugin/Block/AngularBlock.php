@@ -14,7 +14,24 @@ use Drupal\Core\Block\BlockBase;
  */
 class AngularBlock extends BlockBase {
 	public function build() {
-		// TODO generate and return block code
+		return [
+			'input' => [
+				'#type' => 'textfield',
+				'#title' => $this->t('Name'),
+				'#placeholder' => $this->t('Enter a name here'),
+				'#attributes' => [
+					'ng-model' => 'yourName',
+				],
+			],
+			'name' => [
+				'#markup' => '<hr><h1>Hello {{yourName}}</h1>',
+			],
+			'#attached' => [
+				'library' => [
+					'angularmodule/angular',
+				],
+			],
+		];
 	}
 }
 
