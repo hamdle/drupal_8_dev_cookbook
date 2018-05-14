@@ -1,0 +1,4 @@
+name: Angular Module
+type: module
+description: Provides an AngularJS app.
+core: 8.x
