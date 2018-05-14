@@ -1,0 +1,17 @@
+{
+  "name": "angularmodule",
+  "homepage": "https://github.com/hamdle/drupal_8_dev_cookbook",
+  "authors": [
+    "Eric <emarty@psoriasis.org>"
+  ],
+  "description": "Example module with AngularJS",
+  "main": "",
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
